@@ -59,7 +59,7 @@ nav ul li a {
 }
 
 .site-footer {
-  background: linear-gradient(135deg, #B46F81, #d3be73);
+  background: #333;
   color: white;
   text-align: center;
   padding: 10px 0;
@@ -67,6 +67,7 @@ nav ul li a {
   position: relative;
 }
 
+/* Change hyperlink color */
 a {
   color: #ad799e; /* Change this to your desired hyperlink color */
   text-decoration: none;
@@ -75,10 +76,4 @@ a {
 a:hover {
   color: #ffffff; /* Change this to your desired hover color */
   text-decoration: underline;
-}
-
-/* Remove margin and padding from all elements to prevent gaps */
-* {
-  margin: 0;
-  padding: 0;
 }
