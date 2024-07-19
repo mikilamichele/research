@@ -7,7 +7,7 @@ body {
 }
 
 .page-header {
-  background: linear-gradient(135deg, #955796, #B46F81, #BD8FAC, #D4A73D, #E49B3C);
+  background: linear-gradient(135deg, #BD8FAC, #955796, #B46F81, #D4A73D, #E49B3C);
   color: white;
   padding: 20px 0;
   width: 100%;
