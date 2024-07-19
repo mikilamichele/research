@@ -7,7 +7,7 @@ body {
 }
 
 .page-header {
-  background: linear-gradient(135deg, #a64d79, #FEAD46);
+  background: linear-gradient(135deg, #B46F81, #d3be73);
   color: white;
   padding: 20px 0;
   width: 100%;
@@ -59,7 +59,7 @@ nav ul li a {
 }
 
 .site-footer {
-  background: #333;
+  background: linear-gradient(135deg, #B46F81, #d3be73);
   color: white;
   text-align: center;
   padding: 10px 0;
