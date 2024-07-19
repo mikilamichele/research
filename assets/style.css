@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.page-header {
+    background: linear-gradient(135deg, #a64d79, #FEAD46);
+    color: white;
+    padding: 20px 0;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.page-header h1 {
+    margin: 0;
+    text-decoration: none;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 20px 0 0 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav ul li {
+    line-height: 1;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.page-content-wrapper {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.page-content {
+    box-sizing: border-box;
+}
+
+.site-footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: relative;
+}
+
+/* Change hyperlink color */
+a {
+    color: #ad799e; /* Change this to your desired hyperlink color */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffffff; /* Change this to your desired hover color */
+    text-decoration: underline;
+}
