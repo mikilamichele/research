@@ -75,14 +75,19 @@ nav ul li a {
 .image-content {
   flex: 1;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .image-content img {
   max-width: 100%;
   height: auto;
   max-height: 80vh; /* Ensure it doesn't take up more than 80% of the viewport height */
+}
+
+.study-objectives {
+  width: 100%;
+  margin-top: 20px;
 }
 
 .site-footer {
