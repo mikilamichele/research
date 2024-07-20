@@ -1,68 +1,106 @@
+/* assets/css/style.css */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .page-header {
-    background: linear-gradient(to right, #c79aba, #bd8fac, #955796, #D4A73D, #E49B3C);
-    padding: 20px;
-    text-align: center;
+  background: linear-gradient(135deg, #BD8FAC, #955796, #B46F81, #D4A73D, #E49B3C);
+  color: white;
+  padding: 20px 0;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 .page-header h1 {
-    margin: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  margin: 20px 0 0 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 10px;
+  line-height: 1;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .page-content-wrapper {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding: 20px;
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .title-container {
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .content-container {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1200px;
 }
 
 .text-content {
-    flex: 1;
-    padding-right: 20px;
+  flex: 1;
+  padding-right: 20px;
 }
 
 .image-content {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .image-content img {
-    max-width: 100%;
-    height: auto;
-    max-height: 80vh; /* Ensure it doesn't take up more than 80% of the viewport height */
+  max-width: 100%;
+  height: auto;
+  max-height: 80vh; /* Ensure it doesn't take up more than 80% of the viewport height */
 }
 
 .site-footer {
-    background-color: #f4f4f4;
-    text-align: center;
-    padding: 10px 0;
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  position: relative;
+}
+
+/* Change hyperlink color */
+a {
+  color: #ad799e; /* Change this to your desired hyperlink color */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffffff; /* Change this to your desired hover color */
+  text-decoration: underline;
 }
