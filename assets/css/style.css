@@ -32,6 +32,7 @@ nav ul li {
 
 .content-container {
     display: flex;
+    flex-direction: row;
     width: 100%;
     max-width: 1200px;
 }
@@ -51,6 +52,7 @@ nav ul li {
 .image-content img {
     max-width: 100%;
     height: auto;
+    max-height: 80vh; /* Ensure it doesn't take up more than 80% of the viewport height */
 }
 
 .site-footer {
