@@ -72,8 +72,9 @@ nav ul li a {
   padding-right: 20px;
 }
 
-.tableau-content { 
-  flex: 1; /* Takes up remaining space equally with other flex items */ }
+.tableau-content {
+  flex: 1; /* Takes up remaining space equally with other flex items */
+}
 
 .image-content {
   flex: 1;
