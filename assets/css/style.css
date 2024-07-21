@@ -76,6 +76,13 @@ nav ul li a {
   flex: 1; /* Takes up remaining space equally with other flex items */
 }
 
+.table-title {
+    border: none; /* Remove border */
+    text-align: left; /* Center align the title */
+    font-size: 1.25em; /* Adjust font size as needed */
+    padding: 10px; /* Add some padding for spacing */
+}
+
 .image-content {
   flex: 1;
   display: flex;
