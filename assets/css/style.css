@@ -83,6 +83,24 @@ nav ul li a {
   align-items: flex-start;
 }
 
+.table-small {
+    width: 70%; /* Adjust the width as needed */
+    margin: auto;
+}
+
+.table-content {
+    flex: 1; /* The table will take up another part of the space */
+}
+
+.content-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /* Align items at the start of the container */
+    gap: 20px; /* Add some space between the text and the table */
+}
+
+
+
 .image-content img {
   max-width: 100%;
   height: auto;
