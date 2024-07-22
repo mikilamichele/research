@@ -6,52 +6,6 @@
     <title>GEMINAI-Study</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
-        .content-container {
-            display: flex;
-            align-items: center; /* Vertically center align */
-            margin-bottom: 20px;
-        }
-        .image-content {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 10px;
-        }
-        .text-content {
-            flex: 2;
-            padding: 10px;
-        }
-        .single-column {
-            display: flex;
-            flex-direction: column;
-        }
-        .three-columns {
-            display: flex;
-            justify-content: space-between;
-        }
-        .three-columns .column {
-            flex: 1;
-            padding: 10px;
-        }
-        .chart-content {
-            flex: 1;
-            padding: 10px;
-        }
-        .interactive-section-title {
-            text-align: center;
-            width: 100%;
-        }
-        .image-content img {
-            max-width: 100%;
-            height: auto;
-        }
-        .image-large {
-            max-width: 80%;
-            height: auto;
-            display: block;
-            margin: auto;
-        }
         .tableau-content {
             width: 60%; /* Constrain Tableau dashboard to 60% of the page */
             margin: 0 auto;
@@ -74,287 +28,58 @@
         </nav>
     </header>
     <main class="page-content-wrapper">
-        <div class="title-container">
-            <h1>GEMINAI Study: Geopolitical, Ethnic, and Moral Identity on <br>Narcissism, Altruism, and Political Ideology</h1>
-            <h3>Understanding the Interplay of Geopolitical, Ethnic, and Moral Identities in Shaping Political Attitudes and Behaviors in U.S. Emerging Adults</h3>
-        </div>
-        
-        <section id="introduction">
+        <!-- Tableau Dashboard Section -->
+        <section id="tableau-dashboard">
             <div class="content-container">
-                <div class="text-content">
-                    <h2>Introduction</h2>
-                    <p>Emerging adulthood, typically defined as the age range from 18 to 29 years, is a critical period for identity development (Arnett, 2000). During this stage, individuals engage in extensive exploration and solidification of various aspects of their self-concept, including geopolitical, ethnic, and moral identities. These identity domains play significant roles in shaping political attitudes and behaviors, which in turn impact societal outcomes in a multicultural world (Phinney, 1992; Schwartz et al., 2012).</p>
-                    <p><strong>Geopolitical Identities:</strong> Civic, national, and global identities represent different levels of geopolitical identity. <br>
-                    Civic identity refers to one's identification with and participation in local community activities and responsibilities (Johnson et al., in press). National identity, often linked to patriotism and nationalism, involves identification with one's country and its cultural, political, and historical narratives (Schwartz et al., 2012). Global identity, on the other hand, reflects a broader identification with humanity and concerns for global issues (McFarland et al., 2012).</p>
-                    <p><strong>Ethnic Identity:</strong> Ethnic identity involves an individual's sense of belonging to a particular ethnic group and the importance of this group membership to their overall self-concept (Phinney, 1992). Ethnic identity development is crucial during emerging adulthood as individuals navigate their cultural heritage and its integration into their broader identity.</p>
-                    <p><strong>Moral Identity:</strong> Moral identity is defined by the extent to which being a moral person is central to an individual's self-concept. This identity domain influences ethical behavior and attitudes towards social issues (Aquino & Reed, 2002).</p>
-                    <p><strong>Interrelationships and Political Implications:</strong> Previous research has explored these identities in isolation, but few studies have integrated them to understand their combined influence on political attitudes and behaviors. Understanding these interrelationships is critical, especially in a multicultural and politically polarized society. For example, strong national identity has been linked to more conservative political attitudes, while global identity is often associated with more liberal perspectives (Citrin et al., 1990; Schwartz et al., 2012).</p>
-                </div>
-                <div class="image-content">
-                    <img class="image-large" src="https://raw.githubusercontent.com/mikilamichele/research/main/info-thin-plumv2.png" alt="Infographic">
-                </div>
-            </div>
-        </section>
-
-        <section id="study-objectives">
-            <div class="content-container">
-                <div class="text-content">
-                    <h2>Study Objectives</h2>
-                    <p>This study seeks to explore the connections between GEM (Geopolitical, Ethnic, and Moral) identities and political attitudes and behaviors among emerging adults in the United States. We aim to fill existing research gaps with the following hypotheses:</p>
-                    <ol>
-                        <li><strong>Latent Profiles of GEM Identities:</strong> We expect to identify distinct latent profiles within the sample (H1).</li>
-                        <li><strong>Moral Identity and Exploration:</strong> Profiles with higher moral identity will likely score higher on exploration and rumination measures (H2a).</li>
-                        <li><strong>Global Identity and Commitment:</strong> Profiles with higher global identities are anticipated to score higher on rumination and lower on commitment measures (H2b).</li>
-                        <li><strong>Social Identities and Narcissism:</strong>
-                            <ul>
-                                <li>Profiles with lower social identities (civic, American, global, and ethnic) will likely score higher on measures of narcissism (H3a).</li>
-                                <li>Profiles with higher global identity will also be associated with higher narcissism scores (H3b).</li>
-                            </ul>
-                        </li>
-                        <li><strong>Global and Civic Identity and Altruism:</strong>
-                            <ul>
-                                <li>High global identity profiles will be linked to higher altruism (H4a).</li>
-                                <li>Higher civic identity profiles will similarly be associated with higher altruism (H4b).</li>
-                            </ul>
-                        </li>
-                        <li><strong>National and Global Identity and Ideologies:</strong>
-                            <ul>
-                                <li>High national identity profiles will correlate with more conservative ideologies (H5a).</li>
-                                <li>High global identity profiles will correlate with more liberal ideologies (H5b).</li>
-                            </ul>
-                        </li>
-                    </ol>
-                    <p>By examining these hypotheses, our research aims to provide a comprehensive understanding of how identity domains interact and influence political attitudes and behaviors. This study will offer valuable insights for fostering positive societal outcomes in a multicultural world.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="methodology">
-            <div class="content-container">
-                <div class="text-content">
-                    <h2>Methodology</h2>
-                    <p><strong>Research Method.</strong> Emerging adults within the United States were recruited through mTurk. Participants were required to be between the ages of 18 and 35 years and living in the United States at the time of the study. The study was advertised to the mTurk population and participants were paid $2.00 US for their time. The survey took about 25-30 minutes to complete on average. Several attention screeners were used, including open-ended items, to ensure the quality of data was high and to eliminate the possibility of “bots” from receiving compensation for the study, as such “bots” will typically not be able to interpret correctly an open-ended question and will enter nonsense characters in the text box.
-                    </p>
-                    <p><strong>Participants.</strong> The sample initially included 1,007 total participants from across the United States. Thirty-four participants were removed from the data for failing to pass at least one of the four attention screener items in the online survey, and three were removed for excessive missing or incorrect data (e.g., missing most or all of an entire measure within the survey, producing a zip code outside of the U.S.) leaving a total sample size of n = 970 (M age = 28.14, SD = 4.30). Participants were between the ages of 18 and 35 years old and living in the United States (see Figure 1 for a full distribution of participants’ ages). A little more than half were women (n = 519, 53.34%), less than half were men (n = 444, 45.63%), two identified as non-binary (0.21%), and five declined to identify (0.52%). The ethnic breakdown was as follows: Asian or Asian American participants made up 7.42% (n = 72), Black or African American participants made up 9.20% (n = 89), Hispanic or Latino participants made up 6.91% (n = 67), White or European American participants made up the majority of the sample at 71.44% (n = 693), American Indian or Native American participants made up 1.34% (n = 13), and Mixed, Biracial, or Multiethnic participants made up 3.30% (n = 32), while 0.41% (n = 4) preferred not to identify.
-                    </p>
-                </div>
-                <div class="image-content">
-                    <img class="image-large" src="https://raw.githubusercontent.com/mikilamichele/research/main/descriptive-stats-GEM-profiles.png" alt="Descriptive statistics for GEM profiles">
-                </div>
-            </div>
-
-            <div class="content-container">
-                <div class="text-content">
-                    <p>All 50 U.S. states and the District of Columbia were represented in the sample by at least one participant. The top five states participants were located in include California (n = 92, 9%), Florida (n = 82, 8%), New York (n = 68, 7%), Texas (n = 65, 7%), and Ohio (n = 50, 5%). No one state made up more than 10% of the overall sample, and participants were fairly evenly spread out throughout the nation (for a full report of participants’ state of residence, see Table 1 below). Thirty-eight percent (n = 374) live in suburban environments, 32.27% (n = 313) in urban environments, 15.46% (n = 150) in small towns, and 13.40% (n = 130) in rural environments. Three participants (>1%) did not report on the population density of their residence.
-                    </p>
-                    <p>In addition to asking participants about the population density of where they currently live, participants were also asked about the environments in which they grew up. The majority of participants (64.85%, n = 629) currently live in the same level of population density (e.g., rural, suburban, urban, etc.) as they did while growing up, 23.51% (n = 228) have moved to a more urban environment, and 14.30% (n = 113) have moved to a more rural environment.
-                    </p>
-                </div>
                 <div class="tableau-content">
-                    <div class='tableauPlaceholder' id='viz1721387695342' style='position: relative'>
+                    <div class='tableauPlaceholder' id='viz1721627799457' style='position: relative'>
                         <noscript>
                             <a href='#'>
-                                <img alt='Geographic Distribution of Study Participants ' src='https://public.tableau.com/static/images/TK/TKRCNJJJ4/1_rss.png' style='border: none' />
+                                <img alt='Dashboard 1 ' src='https://public.tableau.com/static/images/GE/GEMINAIOutcomesbyProfile/Dashboard1/1_rss.png' style='border: none' />
                             </a>
                         </noscript>
                         <object class='tableauViz' style='display:none;'>
                             <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
                             <param name='embed_code_version' value='3' /> 
-                            <param name='path' value='shared/TKRCNJJJ4' /> 
+                            <param name='site_root' value='' />
+                            <param name='name' value='GEMINAIOutcomesbyProfile%2FDashboard1' />
+                            <param name='tabs' value='no' />
                             <param name='toolbar' value='yes' />
-                            <param name='static_image' value='https://public.tableau.com/static/images/TK/TKRCNJJJ4/1.png' /> 
+                            <param name='static_image' value='https://public.tableau.com/static/images/GE/GEMINAIOutcomesbyProfile/Dashboard1/1.png' />
                             <param name='animate_transition' value='yes' />
                             <param name='display_static_image' value='yes' />
                             <param name='display_spinner' value='yes' />
                             <param name='display_overlay' value='yes' />
                             <param name='display_count' value='yes' />
                             <param name='language' value='en-US' />
+                            <param name='filter' value='publish=yes' />
                         </object>
                     </div>
                     <script type='text/javascript'>
-                        var divElement = document.getElementById('viz1721387695342');
+                        var divElement = document.getElementById('viz1721627799457');
                         var vizElement = divElement.getElementsByTagName('object')[0];
-                        vizElement.style.width='100%';
-                        vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+                        if (divElement.offsetWidth > 800) { 
+                            vizElement.style.minWidth = '420px';
+                            vizElement.style.maxWidth = '650px';
+                            vizElement.style.width = '100%';
+                            vizElement.style.minHeight = '587px';
+                            vizElement.style.maxHeight = '887px';
+                            vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+                        } else if (divElement.offsetWidth > 500) { 
+                            vizElement.style.minWidth = '420px';
+                            vizElement.style.maxWidth = '650px';
+                            vizElement.style.width = '100%';
+                            vizElement.style.minHeight = '587px';
+                            vizElement.style.maxHeight = '887px';
+                            vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+                        } else { 
+                            vizElement.style.width = '100%';
+                            vizElement.style.height = '877px';
+                        } 
                         var scriptElement = document.createElement('script');
                         scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
                         vizElement.parentNode.insertBefore(scriptElement, vizElement);
                     </script>
-                </div>
-            </div>
-        </section>
-
-        <div class="content-container">
-                <div class="text-content">
-                    <h2>Measures</h2>
-                    <p><strong>Measures.</strong> The study utilized various validated scales to measure different dimensions of identity and personality among participants.</p>
-                </div>
-        </div>
-       
-        <section id="measures">
-            <div class="content-container">
-                <div class="three-columns">
-                    <div class="column">
-                        <ul>
-                            <em>Ego Identity</em>
-                            <li>Commitment making</li>
-                            <li>Identification with commitment</li>
-                            <li>Exploration in depth</li>
-                            <li>Exploration in breadth</li>
-                            <li>Ruminative exploration</li>
-                        </ul>
-                        <ul>
-                            <em>Ethnic Identity:</em>
-                            <li>Exploration</li>
-                            <li>Commitment/affirmation</li>
-                            <li>Internalization</li>
-                        </ul>
-                        <ul>
-                            <em>Moral Identity:</em>
-                            <li>Internalization</li>
-                            <li>Symbolization</li>
-                        </ul>
-                        <ul>
-                            <em>Civic Identity:</em>
-                            <li>Exploration</li>
-                            <li>Commitment</li>
-                            <li>Internalization</li>
-                        </ul>
-                    </div>
-                    <div class="column">
-                        <ul>
-                            <em>American Identity:</em>
-                            <li>Exploration</li>
-                            <li>Commitment</li>
-                        </ul>
-                        <ul>
-                            <em>Global Identity:</em>
-                            <li>Identification with All Humanity Scale</li>
-                        </ul>
-                        <ul>
-                            <em>Narcissism:</em>
-                            <li>Leadership/authority</li>
-                            <li>Grandiose/exhibitionism</li>
-                            <li>Entitlement/exploitation</li>
-                        </ul>
-                        <ul>
-                            <em>Altruism:</em>
-                            <li>Self-Report Altruism Scale</li>
-                        </ul>
-                    </div>
-                    <div class="column">
-                        <ul>
-                            <em>Political Ideology:</em>
-                            <li>Social justice</li>
-                                <ul><li>e.g., welfare, decriminalization of drugs, access to healthcare</li></ul>
-                            <li>Core governance issues</li>
-                                <ul><li>e.g., environment, healthcare, education, gun control</li></ul>
-                            <li>Social issues</li>
-                                <ul><li>e.g., gender issues, immigration, same-sex marriage</li></ul>
-                            <li>Neo-conservative issues</li>
-                                <ul><li>military funding, police funding, business regulations</li></ul>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Tableau Dashboard Section -->
-      <section id="tableau-dashboard">
-    <div class="content-container">
-        <div class="tableau-content">
-            <div class='tableauPlaceholder' id='viz1721627799457' style='position: relative'>
-                <noscript>
-                    <a href='#'>
-                        <img alt='Dashboard 1 ' src='https://public.tableau.com/static/images/GE/GEMINAIOutcomesbyProfile/Dashboard1/1_rss.png' style='border: none' />
-                    </a>
-                </noscript>
-                <object class='tableauViz' style='display:none;'>
-                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
-                    <param name='embed_code_version' value='3' /> 
-                    <param name='site_root' value='' />
-                    <param name='name' value='GEMINAIOutcomesbyProfile%2FDashboard1' />
-                    <param name='tabs' value='no' />
-                    <param name='toolbar' value='yes' />
-                    <param name='static_image' value='https://public.tableau.com/static/images/GE/GEMINAIOutcomesbyProfile/Dashboard1/1.png' />
-                    <param name='animate_transition' value='yes' />
-                    <param name='display_static_image' value='yes' />
-                    <param name='display_spinner' value='yes' />
-                    <param name='display_overlay' value='yes' />
-                    <param name='display_count' value='yes' />
-                    <param name='language' value='en-US' />
-                    <param name='filter' value='publish=yes' />
-                </object>
-            </div>
-            <script type='text/javascript'>
-                var divElement = document.getElementById('viz1721627799457');
-                var vizElement = divElement.getElementsByTagName('object')[0];
-                if (divElement.offsetWidth > 800) { 
-                    vizElement.style.minWidth = '420px';
-                    vizElement.style.maxWidth = '650px';
-                    vizElement.style.width = '100%';
-                    vizElement.style.minHeight = '587px';
-                    vizElement.style.maxHeight = '887px';
-                    vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
-                } else if (divElement.offsetWidth > 500) { 
-                    vizElement.style.minWidth = '420px';
-                    vizElement.style.maxWidth = '650px';
-                    vizElement.style.width = '100%';
-                    vizElement.style.minHeight = '587px';
-                    vizElement.style.maxHeight = '887px';
-                    vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
-                } else { 
-                    vizElement.style.width = '100%';
-                    vizElement.style.height = '877px';
-                } 
-                var scriptElement = document.createElement('script');
-                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-                vizElement.parentNode.insertBefore(scriptElement, vizElement);
-            </script>
-        </div>
-    </div>
-</section>
-
-        <section id="results">
-            <div class="content-container">
-                <div class="text-content">
-                    <h2>Results</h2>
-                    <p>Preliminary analyses showed all variables had a skew of less than two and kurtosis less than seven, indicating adequate normality. Descriptive statistics for all latent and outcome variables are provided in the table above. Correlations between GEM identity measures and outcome variables are detailed in Appendix K.</p>
-
-                    <h3>Latent Profile Analysis of GEM Identities</h3>
-                    <p>To explore identity profiles from dimensions of geopolitical (civic, national, and global), ethnic, and moral (GEM) identities, a latent profile analysis (LPA) was performed. LPA identifies categorical profiles based on continuous indicators. The 10 indicators used were:</p>
-                    <ul>
-                      <li>Civic identity: exploration (CEXP), commitment (CCOM), internalization (CINT)</li>
-                      <li>American identity: exploration (AMEXP), commitment (AMCOM)</li>
-                      <li>Global identity (GLOBAL)</li>
-                      <li>Ethnic identity: searching (ETHSEA), commitment (ETHCOM)</li>
-                      <li>Moral identity: internalization (MORINT), symbolization (MORSYM)</li>
-                    </ul>
-                    <p>A series of models with profiles from two to 10 were analyzed using the tidyLPA package in R. Model fit was evaluated using Bayesian information criterion (BIC), Akaike’s information criterion (AIC), bootstrap likelihood ratio test (BLRT), and entropy score.
-                    </p>
-                    <p>Results indicated that the five-profile solution provided the best fit based on AIC and entropy scores. Although the BIC score suggested a six-profile solution, the five-profile solution had more substantive implications, leading to its selection for analysis.
-                    </p>
-                </div>
-                <div class="image-content">
-                    <img class="image-large" src="https://raw.githubusercontent.com/mikilamichele/research/main/model-fit-stats.png" alt="LPA model fit statistics">
-                </div>
-            </div>
-            <div class="content-container">
-                <div class="image-content">
-                    <h3>Interactive Radar Chart</h3>
-                    <iframe src="interactive_radar_chart.html" width="100%" height="600px"></iframe>
-                </div>
-            </div>
-        </section>
-    
-        <section id="interactive-visualizations">
-            <div class="interactive-section-title">
-                <h2>Interactive Bar Chart of Identity Profiles and Indices</h2>
-            </div>
-            <div class="content-container">
-                <div class="chart-content">
-                    <h3>Interactive Bar Chart</h3>
-                    <iframe src="interactive_bar_chart.html" width="100%" height="600px"></iframe>
                 </div>
             </div>
         </section>
