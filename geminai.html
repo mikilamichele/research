@@ -7,8 +7,29 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
         .tableau-content {
-            width: 60%; /* Constrain Tableau dashboard to 60% of the page */
+            width: 60%;
             margin: 0 auto;
+        }
+        .image-large {
+            width: 100%;
+            max-width: 1000px;
+            display: block;
+            margin: 0 auto;
+        }
+        .three-columns {
+            display: flex;
+            justify-content: space-between;
+        }
+        .column {
+            width: 30%;
+        }
+        .text-content, .image-content {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .interactive-section-title {
+            text-align: center;
+            margin: 40px 0;
         }
     </style>
 </head>
@@ -28,11 +49,84 @@
         </nav>
     </header>
     <main class="page-content-wrapper">
+        <section id="measures">
+            <div class="content-container">
+                <div class="text-content single-column">
+                    <h2>Measures</h2>
+                    <p><strong>Measures.</strong> The study utilized various validated scales to measure different dimensions of identity and personality among participants.</p>
+                </div>
+                <div class="three-columns">
+                    <div class="column">
+                        <ul>
+                            <em>Ego Identity</em>
+                            <li>Commitment making</li>
+                            <li>Identification with commitment</li>
+                            <li>Exploration in depth</li>
+                            <li>Exploration in breadth</li>
+                            <li>Ruminative exploration</li>
+                        </ul>
+                        <ul>
+                            <em>Ethnic Identity:</em>
+                            <li>Exploration</li>
+                            <li>Commitment/affirmation</li>
+                            <li>Internalization</li>
+                        </ul>
+                        <ul>
+                            <em>Moral Identity:</em>
+                            <li>Internalization</li>
+                            <li>Symbolization</li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <ul>
+                            <em>Civic Identity:</em>
+                            <li>Exploration</li>
+                            <li>Commitment</li>
+                            <li>Internalization</li>
+                        </ul>
+                        <ul>
+                            <em>American Identity:</em>
+                            <li>Reliability: 0.92 and 0.79</li>
+                            <li>Exploration</li>
+                            <li>Commitment</li>
+                        </ul>
+                        <ul>
+                            <em>Global Identity:</em>
+                            <li>Identification with All Humanity Scale</li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <ul>
+                            <em>Narcissism:</em>
+                            <li>Leadership/authority</li>
+                            <li>Grandiose/exhibitionism</li>
+                            <li>Entitlement/exploitation</li>
+                        </ul>
+                        <ul>
+                            <em>Altruism:</em>
+                            <li>Self-Report Altruism Scale</li>
+                        </ul>
+                        <ul>
+                            <em>Political Ideology:</em>
+                            <li>Social justice</li>
+                                <ul><li>e.g., welfare, decriminalization of drugs, access to healthcare</li></ul>
+                            <li>Core governance issues</li>
+                                <ul><li>e.g., environment, healthcare, education, gun control</li></ul>
+                            <li>Social issues</li>
+                                <ul><li>e.g., gender issues, immigration, same-sex marriage</li></ul>
+                            <li>Neo-conservative issues</li>
+                                <ul><li>military funding, police funding, business regulations</li></ul>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Tableau Dashboard Section -->
         <section id="tableau-dashboard">
             <div class="content-container">
                 <div class="tableau-content">
-                    <div class='tableauPlaceholder' id='viz1721627799457' style='position: relative'>
+                    <div class='tableauPlaceholder' id='viz1721629861962' style='position: relative'>
                         <noscript>
                             <a href='#'>
                                 <img alt='Dashboard 1 ' src='https://public.tableau.com/static/images/GE/GEMINAIOutcomesbyProfile/Dashboard1/1_rss.png' style='border: none' />
@@ -56,7 +150,7 @@
                         </object>
                     </div>
                     <script type='text/javascript'>
-                        var divElement = document.getElementById('viz1721627799457');
+                        var divElement = document.getElementById('viz1721629861962');
                         var vizElement = divElement.getElementsByTagName('object')[0];
                         if (divElement.offsetWidth > 800) { 
                             vizElement.style.minWidth = '420px';
@@ -80,6 +174,50 @@
                         scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
                         vizElement.parentNode.insertBefore(scriptElement, vizElement);
                     </script>
+                </div>
+            </div>
+        </section>
+
+        <section id="results">
+            <div class="content-container">
+                <div class="text-content">
+                    <h2>Results</h2>
+                    <p>Preliminary analyses showed all variables had a skew of less than two and kurtosis less than seven, indicating adequate normality. Descriptive statistics for all latent and outcome variables are provided in the table above. Correlations between GEM identity measures and outcome variables are detailed in Appendix K.</p>
+
+                    <h3>Latent Profile Analysis of GEM Identities</h3>
+                    <p>To explore identity profiles from dimensions of geopolitical (civic, national, and global), ethnic, and moral (GEM) identities, a latent profile analysis (LPA) was performed. LPA identifies categorical profiles based on continuous indicators. The 10 indicators used were:</p>
+                    <ul>
+                      <li>Civic identity: exploration (CEXP), commitment (CCOM), internalization (CINT)</li>
+                      <li>American identity: exploration (AMEXP), commitment (AMCOM)</li>
+                      <li>Global identity (GLOBAL)</li>
+                      <li>Ethnic identity: searching (ETHSEA), commitment (ETHCOM)</li>
+                      <li>Moral identity: internalization (MORINT), symbolization (MORSYM)</li>
+                    </ul>
+                    <p>A series of models with profiles from two to 10 were analyzed using the tidyLPA package in R. Model fit was evaluated using Bayesian information criterion (BIC), Akaike’s information criterion (AIC), bootstrap likelihood ratio test (BLRT), and entropy score.
+                    </p>
+                    <p>Results indicated that the five-profile solution provided the best fit based on AIC and entropy scores. Although the BIC score suggested a six-profile solution, the five-profile solution had more substantive implications, leading to its selection for analysis.
+                    </p>
+                </div>
+                <div class="image-content">
+                    <img class="image-large" src="https://raw.githubusercontent.com/mikilamichele/research/main/model-fit-stats.png" alt="LPA model fit statistics">
+                </div>
+            </div>
+            <div class="content-container">
+                <div class="image-content">
+                    <h3>Interactive Radar Chart</h3>
+                    <iframe src="interactive_radar_chart.html" width="100%" height="600px"></iframe>
+                </div>
+            </div>
+        </section>
+    
+        <section id="interactive-visualizations">
+            <div class="interactive-section-title">
+                <h2>Interactive Bar Chart of Identity Profiles and Indices</h2>
+            </div>
+            <div class="content-container">
+                <div class="chart-content">
+                    <h3>Interactive Bar Chart</h3>
+                    <iframe src="interactive_bar_chart.html" width="100%" height="600px"></iframe>
                 </div>
             </div>
         </section>
