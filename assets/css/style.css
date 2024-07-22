@@ -83,37 +83,11 @@ nav ul li a {
     padding: 10px; /* Add some padding for spacing */
 }
 
-.image-content img {
-    max-width: 100%;
-    height: auto;
-}
-
-.image-large {
-    max-width: 80%;
-    height: auto;
-    display: block;
-    margin: auto;
-}
-
-.content-container {
-    display: flex;
-    align-items: center; /* Vertically center align */
-    margin-bottom: 20px;
-}
-
-.tableau-content {
-    width: 60%; /* Constrain Tableau dashboard to 60% of the page */
-    margin: 0 auto;
-}
-
-.three-columns {
-    display: flex;
-    justify-content: space-between;
-}
-
-.three-columns .column {
-    flex: 1;
-    padding: 10px;
+.image-content {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .table-small {
@@ -123,6 +97,21 @@ nav ul li a {
 
 .table-content {
     flex: 1; /* The table will take up another part of the space */
+}
+
+.content-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /* Align items at the start of the container */
+    gap: 20px; /* Add some space between the text and the table */
+}
+
+
+
+.image-content img {
+  max-width: 100%;
+  height: auto;
+  max-height: 80vh; /* Ensure it doesn't take up more than 80% of the viewport height */
 }
 
 .study-objectives {
