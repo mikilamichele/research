@@ -276,34 +276,10 @@
                 </div>
             </div>
         </section>
-<!-- Tableau Dashboard Section Working-->
-<div class='tableauPlaceholder' id='viz1721631273257' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;GE&#47;GEMINAIOutcomesbyProfile&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='GEMINAIOutcomesbyProfile&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;GE&#47;GEMINAIOutcomesbyProfile&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1721631273257');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='877px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-        
-        <section id="results">
-            <div class="content-container">
-                <div class="text-content">
-                    <h2>Results</h2>
-                    <p>Preliminary analyses showed all variables had a skew of less than two and kurtosis less than seven, indicating adequate normality. Descriptive statistics for all latent and outcome variables are provided in the table above. Correlations between GEM identity measures and outcome variables are detailed in Appendix K.</p>
 
-                    <h3>Latent Profile Analysis of GEM Identities</h3>
-                    <p>To explore identity profiles from dimensions of geopolitical (civic, national, and global), ethnic, and moral (GEM) identities, a latent profile analysis (LPA) was performed. LPA identifies categorical profiles based on continuous indicators. The 10 indicators used were:</p>
-                    <ul>
-                      <li>Civic identity: exploration (CEXP), commitment (CCOM), internalization (CINT)</li>
-                      <li>American identity: exploration (AMEXP), commitment (AMCOM)</li>
-                      <li>Global identity (GLOBAL)</li>
-                      <li>Ethnic identity: searching (ETHSEA), commitment (ETHCOM)</li>
-                      <li>Moral identity: internalization (MORINT), symbolization (MORSYM)</li>
-                    </ul>
-                    <p>A series of models with profiles from two to 10 were analyzed using the tidyLPA package in R. Model fit was evaluated using Bayesian information criterion (BIC), Akaike’s information criterion (AIC), bootstrap likelihood ratio test (BLRT), and entropy score.
-                    </p>
-                    <p>Results indicated that the five-profile solution provided the best fit based on AIC and entropy scores. Although the BIC score suggested a six-profile solution, the five-profile solution had more substantive implications, leading to its selection for analysis.
-                    </p>
-                </div>
-            </div>
-
-            <div class="results">
+<div class="results">
   <h2>Results</h2>
-  <p>Preliminary analyses showed all variables had a skew of less than two and kurtosis less than seven, indicating adequate normality. Descriptive statistics for all latent and outcome variables are provided in the table above. Correlations between GEM identity measures and outcome variables are detailed in Appendix K.</p>
+  <p>Preliminary analyses showed all variables had a skew of less than two and kurtosis less than seven, indicating adequate normality. </p>
 
   <h3>Latent Profile Analysis of GEM Identities</h3>
   <p>To explore identity profiles from dimensions of geopolitical (civic, national, and global), ethnic, and moral (GEM) identities, a latent profile analysis (LPA) was performed. LPA identifies categorical profiles based on continuous indicators. The 10 indicators used were:</p>
@@ -316,7 +292,17 @@
   </ul>
   <p>A series of models with profiles from two to 10 were analyzed using the tidyLPA package in R. Model fit was evaluated using Bayesian information criterion (BIC), Akaike’s information criterion (AIC), bootstrap likelihood ratio test (BLRT), and entropy score.</p>
   <p>Results indicated that the five-profile solution provided the best fit based on AIC and entropy scores. Although the BIC score suggested a six-profile solution, the five-profile solution had more substantive implications, leading to its selection for analysis.</p>
-  
+
+<div class="content-container">
+    <div class="image-content radar-chart">
+        <iframe src="interactive_radar_chart.html" width="100%" height="600px"></iframe>
+    </div>
+    <div class="image-content stacked-images">
+        <img class="image-mid" src="https://raw.githubusercontent.com/mikilamichele/research/main/model-fit-stats.png" alt="LPA model fit statistics" style="width: 80%; max-width: 1200px;"><br>
+        <img class="image-large" src="https://raw.githubusercontent.com/mikilamichele/research/main/descriptive-stats-GEM-profiles.png" alt="Descriptive statistics for GEM profiles" style="width: 80%; max-width: 1200px;">
+    </div>
+</div>
+ 
   <h3>Demographic Differences in Profile Membership</h3>
   <h4>Effects of Ethnicity on Profile Membership</h4>
   <p>A one-way ANOVA revealed a significant effect of ethnicity on profile membership for High Achievers (<i>F</i>(6, 959) = <b>5.352</b>, <i>p</i> < 0.001). A Tukey post hoc test revealed significant differences between groups. Latinos/Hispanics were more likely to be categorized as High Achievers compared to Black/African Americans (<i>p</i> = .002) and less likely compared to Native Americans (<i>p</i> <.001). No significant effects of ethnicity were found for other profiles.</p>
@@ -347,7 +333,11 @@
   <p><b>Commitment Making:</b> High and Moderate Achievers scored highest. Civic Nationals scored lowest.</p>
   <p><b>Identification with Commitment:</b> High and Moderate Achievers scored highest. Civic Nationals scored lowest.</p>
   <p>Overall, higher achievement in GEM identities correlated with high exploration (except ruminative) and commitment, supporting the existence of the latent profiles identified.</p>
-  
+
+         <!-- Tableau Dashboard Section Working-->
+<div class='tableauPlaceholder' id='viz1721631273257' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;GE&#47;GEMINAIOutcomesbyProfile&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='GEMINAIOutcomesbyProfile&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;GE&#47;GEMINAIOutcomesbyProfile&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1721631273257');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='877px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    
+      
   <h3>GEM Profiles in Relation to Narcissism</h3>
   <p><b>H3a:</b> Lower social identities with higher narcissism was not supported. Profiles with lower social identities had higher moral identities. Moral Civic Explorers and Moral Nationals had the lowest narcissism scores, suggesting moral identity might protect against narcissism.</p>
   <p><b>H3b:</b> Higher global identity with higher narcissism was partially supported. Moderate and High Achievers scored high on global identity and leadership/authority narcissism. However, Moral Civic Explorers scored high on global identity but lowest on all narcissism subscales.</p>
@@ -414,16 +404,6 @@
   <p>Moral identity seemed to be a driver of more liberal political ideology, as Moral Civic Explorers were consistently the most liberal profile, and Moral Nationals scoring more liberal on most measures of ideology.</p>
 </div>
 
-
-<div class="content-container">
-    <div class="image-content radar-chart">
-        <iframe src="interactive_radar_chart.html" width="100%" height="600px"></iframe>
-    </div>
-    <div class="image-content stacked-images">
-        <img class="image-mid" src="https://raw.githubusercontent.com/mikilamichele/research/main/model-fit-stats.png" alt="LPA model fit statistics" style="width: 80%; max-width: 1200px;"><br>
-        <img class="image-large" src="https://raw.githubusercontent.com/mikilamichele/research/main/descriptive-stats-GEM-profiles.png" alt="Descriptive statistics for GEM profiles" style="width: 80%; max-width: 1200px;">
-    </div>
-</div>
             
             <div class="content-container">
                
@@ -438,6 +418,28 @@
                 </div>
             </div>
         </section>
+
+      <div class="limitations">
+  <h2>Limitations</h2>
+  <p>The study's generalizability is limited due to the predominantly White sample from Amazon’s Mechanical Turk. Different identity domains, such as gender, sexual, vocational, and religious identities, were not included, potentially limiting the scope of findings. Future studies should explore more diverse samples and additional identity domains to understand their influence on civic attitudes and behaviors.</p>
+</div>
+
+<div class="future-directions">
+  <h2>Future Directions</h2>
+  <p>Future research should investigate the stability and dynamics of GEM identity profiles over time and across developmental stages. Longitudinal studies could examine how profiles change and the influence of identity domains on civic attitudes and behaviors. Understanding the interplay of identities as integrated or competing constructs is another area worth exploring.</p>
+</div>
+
+<div class="theoretical-implications">
+  <h2>Theoretical Implications</h2>
+  <p>This study highlights the importance of geopolitical identities and their influence on behavior and attitudes. It provides insight into how identity profiles are prioritized and their sociopolitical outcomes. The findings also contribute to understanding the relationship between identity development and narcissism in emerging adulthood.</p>
+</div>
+
+<div class="conclusion">
+  <h2>Conclusion</h2>
+  <p>The study identified five distinct latent profiles: High Achievers, Moderate Achievers, Moral Civic Explorers, Moral Nationals, and Civic Nationals. These profiles were significantly differentiated across ego identity, narcissism, altruism, and political ideologies, demonstrating the usefulness of latent profiles in understanding the social and political lives of emerging adults in the United States.</p>
+</div>
+
+      
     </main>
     <footer class="site-footer">
         <p>© 2024 Mikīla Cantwell. All rights reserved.</p>
