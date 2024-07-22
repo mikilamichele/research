@@ -116,11 +116,6 @@ nav ul li a {
     color: #E49B3C;
 }
 
-/* For navigation links */
-nav a:hover {
-    color: white;
-}
-
 .image-content img {
   max-width: 100%;
   height: auto;
