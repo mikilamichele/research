@@ -5,6 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GEMINAI-Study</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .content-container {
+            display: flex;
+            align-items: flex-start; /* Align items to the top */
+            margin-bottom: 20px;
+        }
+        .image-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Center image vertically */
+            padding: 10px;
+        }
+        .text-content {
+            flex: 2;
+            padding: 10px;
+        }
+        .single-column {
+            display: flex;
+            flex-direction: column;
+        }
+        .chart-content {
+            flex: 1;
+            padding: 10px;
+        }
+        .interactive-section-title {
+            text-align: center;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <header class="page-header">
@@ -134,12 +164,9 @@
 
         <section id="measures">
             <div class="content-container">
-                <div class="text-content">
+                <div class="text-content single-column">
                     <h2>Measures</h2>
-                    <p><strong>Measures.</strong> The study utilized various validated scales to measure different dimensions of identity and personality among participants. 
-                    </p>
-                </div>
-                <div class="text-content">
+                    <p><strong>Measures.</strong> The study utilized various validated scales to measure different dimensions of identity and personality among participants.</p>
                     <ul>
                         <em>Ego Identity</em>
                         <li>Commitment making</li>
@@ -159,8 +186,6 @@
                         <li>Internalization</li>
                         <li>Symbolization</li>
                     </ul>
-                </div>
-                <div class="text-content">
                     <ul>
                         <em>Civic Identity:</em>
                         <li>Exploration</li>
@@ -177,8 +202,6 @@
                         <em>Global Identity:</em>
                         <li>Identification with All Humanity Scale</li>
                     </ul>
-                </div>
-                <div class="text-content">
                     <ul>
                         <em>Narcissism:</em>
                         <li>Leadership/authority</li>
@@ -231,10 +254,10 @@
         </section>
 
         <section id="interactive-visualizations">
+            <div class="interactive-section-title">
+                <h2>Interactive Visualizations</h2>
+            </div>
             <div class="content-container">
-                <div class="text-content">
-                    <h2>Interactive Visualizations</h2>
-                </div>
                 <div class="chart-content">
                     <h3>Interactive Bar Chart</h3>
                     <iframe src="interactive_bar_chart.html" width="100%" height="600px"></iframe>
