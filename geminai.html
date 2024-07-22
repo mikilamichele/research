@@ -8,7 +8,7 @@
     <style>
         .content-container {
             display: flex;
-            align-items: center; /* Vertically center align */
+            align-items: flex-start; /* Align items at the top */
             justify-content: space-between; /* Add space between items */
             margin-bottom: 20px;
         }
@@ -54,30 +54,27 @@
             display: block;
             margin: auto;
         }
-        
-.radar-chart {
-    flex: 1; /* Take up as much space as possible */
-}
-        }
-        
         .image-mid {
             max-width: 40%;
             height: auto;
             display: block;
             margin: auto;
         }
-        
-.stacked-images {
-    display: flex;
-    flex-direction: column; /* Stack images vertically */
-    align-items: center; /* Center images horizontally */
-    flex: 1; /* Take up as much space as possible */
+        .radar-chart {
+            flex: 1; /* Take up as much space as possible */
+        }
+        .stacked-images {
+            display: flex;
+            flex-direction: column; /* Stack images vertically */
+            align-items: center; /* Center images horizontally */
+            flex: 1; /* Take up as much space as possible */
+        }
         .tableau-content {
             width: 60%; /* Constrain Tableau dashboard to 60% of the page */
             margin: 0 auto;
         }
 
-/* Left-side navigation */
+        /* Left-side navigation */
         .side-nav {
             position: fixed;
             top: 0;
@@ -104,26 +101,24 @@
         .main-content {
             margin-left: 220px; /* Adjust based on the width of .side-nav */
         }
-    
     </style>
 </head>
 <body>
- <!-- Left-side navigation -->
+    <!-- Left-side navigation -->
     <div class="side-nav">
         <a href="#introduction">Introduction</a>
-        <a href="study-objectives">Study Objective</a>
-        <a href="methodology">Methodology</a>
+        <a href="#study-objectives">Study Objectives</a>
+        <a href="#methodology">Methodology</a>
         <a href="#participant-map">Participant Distribution Map</a>
         <a href="#measures">Measures</a>
         <a href="#Results">Results</a>
         <a href="#Interactive-Radar-Chart">Interactive Radar Chart</a>
         <a href="#Tableau-Dash">Tableau Dashboard</a>
-        <a href="profiles-narcissism">GEM Profiles & Narcissism</a>
-        <a href="profiles-altruism">GEM Profiles & Altruism</a>
-        <a href="profiles-ideology">GEm Profiles & Ideology</a>
-        <a href="discussion">Discussion</a>
+        <a href="#profiles-narcissism">GEM Profiles & Narcissism</a>
+        <a href="#profiles-altruism">GEM Profiles & Altruism</a>
+        <a href="#profiles-ideology">GEM Profiles & Ideology</a>
+        <a href="#discussion">Discussion</a>
         <a href="#interactive-visualizations">Interactive Chart Profiles vs Indices</a>
-
     </div>
     
     <header class="page-header">
@@ -140,7 +135,7 @@
             </ul>
         </nav>
     </header>
-    <main class="page-content-wrapper">
+    <main class="page-content-wrapper main-content">
         <div class="title-container">
             <h1>GEMINAI Study: Geopolitical, Ethnic, and Moral Identity on <br>Narcissism, Altruism, and Political Ideology</h1>
             <h3>Understanding the Interplay of Geopolitical, Ethnic, and Moral Identities <br>in Shaping Political Attitudes and Behaviors in U.S. Emerging Adults</h3>
