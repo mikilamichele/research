@@ -9,12 +9,14 @@
         .content-container {
             display: flex;
             align-items: center; /* Vertically center align */
+            justify-content: space-between; /* Add space between items */
             margin-bottom: 20px;
         }
         .image-content {
             flex: 1;
             display: flex;
             justify-content: center;
+            margin: 10px 0; /* Optional: Add some vertical spacing between images */
             align-items: center;
             padding: 10px;
         }
@@ -52,19 +54,29 @@
             display: block;
             margin: auto;
         }
-
+        
+.radar-chart {
+    flex: 1; /* Take up as much space as possible */
+}
         }
+        
         .image-mid {
             max-width: 40%;
             height: auto;
             display: block;
             margin: auto;
         }
-
+        
+.stacked-images {
+    display: flex;
+    flex-direction: column; /* Stack images vertically */
+    align-items: center; /* Center images horizontally */
+    flex: 1; /* Take up as much space as possible */
         .tableau-content {
             width: 60%; /* Constrain Tableau dashboard to 60% of the page */
             margin: 0 auto;
         }
+    
     </style>
 </head>
 <body>
@@ -85,7 +97,7 @@
     <main class="page-content-wrapper">
         <div class="title-container">
             <h1>GEMINAI Study: Geopolitical, Ethnic, and Moral Identity on <br>Narcissism, Altruism, and Political Ideology</h1>
-            <h3>Understanding the Interplay of Geopolitical, Ethnic, and Moral Identities in Shaping Political Attitudes and Behaviors in U.S. Emerging Adults</h3>
+            <h3>Understanding the Interplay of Geopolitical, Ethnic, and Moral Identities <br>in Shaping Political Attitudes and Behaviors in U.S. Emerging Adults</h3>
         </div>
         
         <section id="introduction">
@@ -289,17 +301,129 @@
                 </div>
             </div>
 
-            <div class="content-container">
-                 <div class="image-content">
-                    <iframe src="interactive_radar_chart.html" width="100%" height="600px"></iframe>
-                </div>
-                <div class="image-content">
-                    <img class="image-mid" src="https://raw.githubusercontent.com/mikilamichele/research/main/model-fit-stats.png" alt="LPA model fit statistics"><br>
-                    <img class="image-large" src="https://raw.githubusercontent.com/mikilamichele/research/main/descriptive-stats-GEM-profiles.png" alt="Descriptive statistics for GEM profiles" style="width: 80%; max-width: 1200px;">
-                </div>
-            </div>
+            <div class="results">
+  <h2>Results</h2>
+  <p>Preliminary analyses showed all variables had a skew of less than two and kurtosis less than seven, indicating adequate normality. Descriptive statistics for all latent and outcome variables are provided in the table above. Correlations between GEM identity measures and outcome variables are detailed in Appendix K.</p>
 
-            STOPPED HERE 
+  <h3>Latent Profile Analysis of GEM Identities</h3>
+  <p>To explore identity profiles from dimensions of geopolitical (civic, national, and global), ethnic, and moral (GEM) identities, a latent profile analysis (LPA) was performed. LPA identifies categorical profiles based on continuous indicators. The 10 indicators used were:</p>
+  <ul>
+    <li>Civic identity: exploration (CEXP), commitment (CCOM), internalization (CINT)</li>
+    <li>American identity: exploration (AMEXP), commitment (AMCOM)</li>
+    <li>Global identity (GLOBAL)</li>
+    <li>Ethnic identity: searching (ETHSEA), commitment (ETHCOM)</li>
+    <li>Moral identity: internalization (MORINT), symbolization (MORSYM)</li>
+  </ul>
+  <p>A series of models with profiles from two to 10 were analyzed using the tidyLPA package in R. Model fit was evaluated using Bayesian information criterion (BIC), Akaike’s information criterion (AIC), bootstrap likelihood ratio test (BLRT), and entropy score.</p>
+  <p>Results indicated that the five-profile solution provided the best fit based on AIC and entropy scores. Although the BIC score suggested a six-profile solution, the five-profile solution had more substantive implications, leading to its selection for analysis.</p>
+  
+  <h3>Demographic Differences in Profile Membership</h3>
+  <h4>Effects of Ethnicity on Profile Membership</h4>
+  <p>A one-way ANOVA revealed a significant effect of ethnicity on profile membership for High Achievers (<i>F</i>(6, 959) = <b>5.352</b>, <i>p</i> < 0.001). A Tukey post hoc test revealed significant differences between groups. Latinos/Hispanics were more likely to be categorized as High Achievers compared to Black/African Americans (<i>p</i> = .002) and less likely compared to Native Americans (<i>p</i> <.001). No significant effects of ethnicity were found for other profiles.</p>
+  
+  <h4>Effects of Political District on Profile Membership</h4>
+  <p>An independent samples t-test showed no significant effect of political district on profile membership.</p>
+  
+  <h4>Effects of Gender on Profile Membership</h4>
+  <p>Males (M = 0.83, M= 0.84) were more likely than females (M = 0.76, M = 0.68) to belong in the High Achievers (<i>t</i> = <b>2.14</b>, <i>p</i> = 0.04) and Moral Civic Explorers (<i>t</i> = <b>4.06</b>, <i>p</i> < .001) profiles. No other gender effects were observed.</p>
+  
+  <h3>Demographic Correlates of Profile Membership</h3>
+  <p>For High Achievers, no demographic variables were significantly correlated. The probability of membership in the Moderate Achievers profile was significantly correlated with currently living in a more urban environment (<i>r</i> = 0.064, <i>p</i> < .10), higher household income (<i>r</i> = 0.124, <i>p</i> < .01), and higher education (<i>r</i> = 0.111, <i>p</i> < .01). The Moral Civic Explorers profile was significantly correlated with being raised in a more rural environment (<i>r</i> = -0.093, <i>p</i> < .01), lower household income (<i>r</i> = -0.084, <i>p</i> < .01), lower levels of education (<i>r</i> = -0.112, <i>p</i> < .01), and younger age (<i>r</i> = -0.080, <i>p</i> < .01). The only significant demographic variable related to Moral Nationals was age, with older participants being more likely included in this profile (<i>r</i> = 0.080, <i>p</i> < .01). Finally, the Civic Nationals profile was significantly correlated with being raised in a more urban environment (<i>r</i> = 0.084, <i>p</i> < .01) and lower household income (<i>r</i> = -0.062, <i>p</i> < .05).</p>
+  
+  <h3>GEM Profiles in Relation to Measures of Individual Ego Identity Status</h3>
+  <p>We compared GEM identity profiles with subscales from the DIDS (exploration in breadth, exploration in depth, ruminative exploration, commitment making, identification with commitment):</p>
+  <ul>
+    <li>High Achievers: Higher scores in all subscales except ruminative exploration.</li>
+    <li>Moderate Achievers: Higher scores in exploration in depth, commitment making, identification with commitment.</li>
+    <li>Moral Civic Explorers: Higher scores in exploration in breadth, lower in exploration in depth, higher in ruminative exploration, lower in commitment making and identification with commitment.</li>
+    <li>Moral Nationals: Negative association with all subscales.</li>
+    <li>Civic Nationals: Negative association with all subscales except ruminative exploration.</li>
+  </ul>
+  
+  <h3>Effects of Profile Membership</h3>
+  <p><b>Exploration in Breadth:</b> High Achievers scored highest, followed by Moral Civic Explorers. Civic Nationals scored lowest.</p>
+  <p><b>Exploration in Depth:</b> High Achievers scored highest, followed by Moderate Achievers. Civic Nationals scored lowest.</p>
+  <p><b>Ruminative Exploration:</b> Moral Civic Explorers and Civic Nationals scored highest. Moral Nationals scored lowest.</p>
+  <p><b>Commitment Making:</b> High and Moderate Achievers scored highest. Civic Nationals scored lowest.</p>
+  <p><b>Identification with Commitment:</b> High and Moderate Achievers scored highest. Civic Nationals scored lowest.</p>
+  <p>Overall, higher achievement in GEM identities correlated with high exploration (except ruminative) and commitment, supporting the existence of the latent profiles identified.</p>
+  
+  <h3>GEM Profiles in Relation to Narcissism</h3>
+  <p><b>H3a:</b> Lower social identities with higher narcissism was not supported. Profiles with lower social identities had higher moral identities. Moral Civic Explorers and Moral Nationals had the lowest narcissism scores, suggesting moral identity might protect against narcissism.</p>
+  <p><b>H3b:</b> Higher global identity with higher narcissism was partially supported. Moderate and High Achievers scored high on global identity and leadership/authority narcissism. However, Moral Civic Explorers scored high on global identity but lowest on all narcissism subscales.</p>
+  
+  <h3>Narcissism Subscales</h3>
+  <p><b>Leadership/Authority:</b> Civic Nationals scored highest, followed by High and Moderate Achievers. Moral Civic Explorers and Moral Nationals scored lowest.</p>
+  <p><b>Grandiose/Exhibitionism:</b> Civic Nationals scored highest, followed by Moderate and High Achievers. Moral Nationals and Moral Civic Explorers scored lowest.</p>
+  <p><b>Entitlement/Exploitation:</b> Civic Nationals scored highest. Other profiles were equally low.</p>
+  <p><b>Overall Narcissism:</b> Civic Nationals scored highest. High and Moderate Achievers scored moderately, with High Achievers scoring higher on leadership/authority narcissism.</p>
+  
+  <h3>GEM Profiles in Relation to Altruism</h3>
+  <p><b>H4a:</b> High global identity profiles with higher altruism was supported. High Achievers, Moderate Achievers, and Moral Civic Explorers scored highest in altruism.</p>
+  <p><b>H4b:</b> Higher civic identity profiles with higher altruism was partially supported. Moral Civic Explorers scored high on altruism and civic identity, but Civic Nationals, strongly characterized by civic identity, scored low on altruism. Civic identity may relate to higher altruism when moral identity is also prioritized.</p>
+  
+  <h3>GEM Profiles in Relation to Political Ideologies</h3>
+  <p><b>H5a:</b> High national identity profiles with more conservative ideologies was supported. Profiles with higher national identities (Civic Nationals and Moral Nationals) scored more conservatively.</p>
+  <p><b>H5b:</b> High global identity profiles with more liberal ideologies was not supported. High and Moderate Achievers, with high global identity, were moderate politically, with High Achievers slightly more liberal.</p>
+  
+  <h3>Political Ideologies in General</h3>
+  <p>Civic Nationals were most conservative across all measures, consistent with low exploration scores and authoritarian tendencies associated with conservative ideologies. Moderate and High Achievers were more moderate, with High Achievers slightly more liberal. Moral identity drove more liberal political ideologies, with Moral Civic Explorers being the most liberal profile.</p>
+</div>
+
+<div class="discussion">
+  <h2>Discussion</h2>
+  <p>Profiles varied the most across civic identity measures, suggesting this identity may be an important (and relatively understudied) influence on self-concept and how we view ourselves in relation to society. American and Ethnic identities were the most homogenous across profiles, likely due to the predominantly White sample. All profiles scored high in moral internalization except Civic Nationals. Only High Achievers and Moderate Achievers scored high on moral symbolization.</p>
+  <p>Higher internalization of identity with the community (measured through civic identity) and commitment to American identity were associated with profiles that also scored high on moral symbolization. This may suggest that increased internalization of a community-based identity may lead an individual to desire more to be assessed by others as a moral individual. Moral internalization was consistently higher compared to moral symbolization for all profiles except Civic Nationals.</p>
+  
+  <h3>Research Question 1: Existence of Latent Profiles Across GEM Domains</h3>
+  <p>Latent profile analysis revealed a five-profile model fit the geopolitical, ethnic, and moral identity data well. These five GEM profiles correlated to measures that would be expected given their dominant domains of identity, providing support that these latent profiles were derived from a model that fits the data in a substantive way. Significant differences were found across measures of ego identity, indicating that levels of exploration and commitment toward an overall sense of individual identity are linked in meaningful ways to patterns of identity across other domains. Differential relationships between identity profiles and narcissism contribute to the current literature on narcissism in emerging adulthood by providing a more fine-grained look at how identity processes may be related to increased narcissism, and how different narcissism subscales, and ultimately different narcissism attitudes and outcomes, are related to identity in differing ways. Overall, the latent profile analysis results support the first (H1) hypothesis that different latent profiles exist within the GEM identity data.</p>
+  
+  <h3>Research Question 2: GEM Profiles in Relation to Ego Identity Status Measures</h3>
+  <p><b>H2a:</b> There were significant differences for all ego identity measures across profiles. In partial support of hypothesis 2a, more overall identity exploration was associated with a higher likelihood of membership in a profile with high moral identity, though rumination was not associated with profiles having higher moral identity.</p>
+  <p><b>H2b:</b> Moral Civic Explorers are characterized by high exploration scores in civic identity and high moral identity scores. This group scored lower on exploration measures, and higher on rumination, supporting this hypothesis.</p>
+  
+  <h3>Ego Identity Status Measures in General</h3>
+  <p><b>Exploration in Depth:</b> Highest for both High and Moderate Achievers profiles. High Achievers have the highest scores overall across all GEM identity measures, suggesting higher exploration in depth potentially leads to greater levels of identity commitment. Civic Nationals were the lowest scoring profile for exploration in depth.</p>
+  <p><b>Exploration in Breadth:</b> High Achievers scored the highest, followed closely by Moral Civic Explorers, who scored high on exploration measures of GEM identities but low on commitment. Civic Nationals scored low both on exploration in breadth and exploration in depth.</p>
+  <p><b>Ruminative Exploration:</b> Moral Civic Explorers and Civic Nationals scored the highest on ruminative exploration. Along with the high exploration in breadth and low exploration in depth scores for Moral Civic Explorers, a high ruminative exploration score suggests this profile group has a varied or unfocused exploration strategy to identity development, consistent with prolonged moratorium. Ruminative exploration was lowest for Moral Nationals.</p>
+  <p><b>Commitment Making:</b> Both High and Moderate Achievers scored highest on commitment making. Moral Nationals had moderately high scores on this measure. Civic Nationals scored the lowest in commitment making.</p>
+  <p><b>Identification with Commitment:</b> Since commitment and exploration characterize High and Moderate Achievement, it is not surprising that these two profiles score higher for commitment making as well. Civic Nationals scored the lowest on this measure.</p>
+  <p><b>Summary of Ego Identity Scales:</b> Overall, profiles characterized by higher achievement in GEM identities scored high on both exploration (except ruminative exploration) and commitment. This suggests that the latent profiles for GEM identities are consistent with ego identity indices of exploration and commitment. Consistency across these two groups of identities may demonstrate further support for the existence of the latent profiles identified in this study.</p>
+  
+  <h3>Research Question 3: GEM Profiles in Relation to Narcissism</h3>
+  <p><b>H3a:</b> This hypothesis was not supported by the data. The profiles that tended to score lower on social identities, scored higher on moral identities. Moral Civic Explorers and Moral Nationals had the lowest scores of narcissism overall. Further research is needed to understand the interaction between moral identity and social identities. Moral identity could be a protective factor of negative effects when lacking identification with social groups. Alternatively, social group membership and identification with a social group may provide a framework for moral attitudes that is protective against traits such as narcissism in a similar fashion to moral identity.</p>
+  <p><b>H3b:</b> This hypothesis was partially supported. Moderate and High Achievers scored high on the global identity measure and moderately high on the authority/leadership subscale of narcissism. However, Moral Civic Explorers also scored high on global identity but scored the lowest on all subscales of narcissism. Considering the Moral Nationals profiles scored similarly low on overall narcissism as the Moral Civic Explorers, this finding may further support the idea that moral identity may be protective against narcissism. Civic Nationals scored the highest on overall narcissism, so it is unlikely that high civic identity or high national identity were protective factors against narcissism for Moral Nationals and Moral Civic Explorers. An alternative interpretation is that moral identity is unrelated to narcissism, but that a sense of identity achievement overall is associated with higher levels of self-esteem, a trait attributed to higher leadership/authority narcissism.</p>
+  
+  <h3>Narcissism Subscales in General</h3>
+  <p><b>Leadership/Authority Narcissism:</b> This subscale of narcissism is considered to represent an adaptive version of narcissism, focusing on skills valued by society such as leadership, assertiveness, and confidence. Civic Nationals scored the highest on this measure of narcissism (and all other narcissism measures). This was the only subscale of narcissism that High Achievers scored moderately high on, followed by Moderate Achievers. Moral Civic Explorers and Moral Nationals scored the lowest on leadership/authority narcissism and on all other measures of narcissism.</p>
+  <p><b>Grandiose/Exhibitionism:</b> Civic Nationals scored the highest on this measure, followed by Moderate Achievers and then High Achievers, with Moral Nationals and Moral Civic Explorers scoring the lowest.</p>
+  <p><b>Entitlement/Exploitation:</b> Once again, Civic Nationals scored the highest on this measure of narcissism. Additionally, Civic Nationals scored the lowest on measures of moral identity, which may be related to a lack of intrinsic motivation to avoid the exploitation of others and a more extreme prioritization of one’s own desires as with entitlement. All other profiles scored equally low on this measure of narcissism.</p>
+  <p><b>Overall Narcissism:</b> Overall, Civic Nationals outrank all other profiles on narcissism subscales and total narcissism. Moderate and High Achievers scored moderately on measures of narcissism, with High Achievers more likely to score high on the leadership/authority subscale, which is theorized to be an adaptive form of narcissism. Concerns over the increase in population levels of reported narcissism may be driven by two paths; higher identity achievement through greater opportunities for and cultural expectations of moratorium, and through foreclosed civic and national identities when moral identity is not included in the profiles as a dominant identity.</p>
+  
+  <h3>Research Question 4: GEM Profiles in Relation to Altruism</h3>
+  <p><b>H4a:</b> The highest scoring profiles in altruism were High Achievers, Moderate Achievers, and Moral Civic Explorers. These were also the three profiles characterized in part by higher global identity, providing support for this hypothesis.</p>
+  <p><b>H4b:</b> This hypothesis was not fully supported by the data. Moral Civic Explorers scored high on altruism and are partially characterized by high civic identity; however, the Civic Nationals profile was the most strongly characterized by high civic identity (exploration specifically, but low on civic internalization). Civic identity may be related to higher altruism, but only when moral identity is also internally prioritized.</p>
+  
+  <h3>Research Question 5: GEM Profiles in Relation to Political Ideologies</h3>
+  <p><b>H5a:</b> This hypothesis is supported by the data in that profiles including higher national identities (e.g., Civic Nationals and Moral Nationals) scored more conservatively or moderately conservatively (respectively) on measures of political ideology.</p>
+  <p><b>H5b:</b> This hypothesis was not supported by the data. The two profiles including the highest scores in global identities are High and Moderate Achievers. High Achievers were somewhat liberal overall, but moderate on social issues and neo-conservative values. Moderate Achievers were more conservative across measures.</p>
+  
+  <h3>Political Ideologies in General</h3>
+  <p>Civic Nationals consistently scored the most conservative on all measures (social justice, core issues, social issues, neo-conservative issues, and overall political ideology). This is consistent with their low exploration scores, as individuals in a more foreclosed status are more likely to enjoy conformity and authoritarianism, which have been associated with more right-wing conservative political ideologies (Bennion & Adams, 1986; Cramer, 2000; Marcia, 1966).</p>
+  <p>Moderate and High Achievers were somewhat moderate politically, with High Achievers being slightly more liberal compared to Moderate Achievers, who were more conservative on social justice issues, core issues, and social issues, but more liberal on neo-conservative values. Decision-making may take different forms for Achievers profiles, who are more likely to make decisions in a more rational and systemic way (Bluestein, Furner, & Phillips, 1990). This differential decision-making process may lead to less empathetic or compassionate responses to political ideology questions.</p>
+  <p>Moral identity seemed to be a driver of more liberal political ideology, as Moral Civic Explorers were consistently the most liberal profile, and Moral Nationals scoring more liberal on most measures of ideology.</p>
+</div>
+
+
+<div class="content-container">
+    <div class="image-content radar-chart">
+        <iframe src="interactive_radar_chart.html" width="100%" height="600px"></iframe>
+    </div>
+    <div class="image-content stacked-images">
+        <img class="image-mid" src="https://raw.githubusercontent.com/mikilamichele/research/main/model-fit-stats.png" alt="LPA model fit statistics" style="width: 80%; max-width: 1200px;"><br>
+        <img class="image-large" src="https://raw.githubusercontent.com/mikilamichele/research/main/descriptive-stats-GEM-profiles.png" alt="Descriptive statistics for GEM profiles" style="width: 80%; max-width: 1200px;">
+    </div>
+</div>
             
             <div class="content-container">
                
