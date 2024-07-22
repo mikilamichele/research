@@ -76,10 +76,56 @@
             width: 60%; /* Constrain Tableau dashboard to 60% of the page */
             margin: 0 auto;
         }
+
+/* Left-side navigation */
+        .side-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 100%;
+            background-color: #f8f9fa;
+            padding-top: 60px;
+            overflow-x: hidden;
+            z-index: 1000;
+        }
+        .side-nav a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #333;
+            display: block;
+        }
+        .side-nav a:hover {
+            background-color: #ddd;
+            color: #000;
+        }
+        /* Adjust main content to not overlap with the side-nav */
+        .main-content {
+            margin-left: 220px; /* Adjust based on the width of .side-nav */
+        }
     
     </style>
 </head>
 <body>
+ <!-- Left-side navigation -->
+    <div class="side-nav">
+        <a href="#introduction">Introduction</a>
+        <a href="study-objectives">Study Objective</a>
+        <a href="methodology">Methodology</a>
+        <a href="#participant-map">Participant Distribution Map</a>
+        <a href="#measures">Measures</a>
+        <a href="#Results">Results</a>
+        <a href="#Interactive-Radar-Chart">Interactive Radar Chart</a>
+        <a href="#Tableau-Dash">Tableau Dashboard</a>
+        <a href="profiles-narcissism">GEM Profiles & Narcissism</a>
+        <a href="profiles-altruism">GEM Profiles & Altruism</a>
+        <a href="profiles-ideology">GEm Profiles & Ideology</a>
+        <a href="discussion">Discussion</a>
+        <a href="#interactive-visualizations">Interactive Chart Profiles vs Indices</a>
+
+    </div>
+    
     <header class="page-header">
         <div class="container">
             <h1>Mikīla (Michele) Cantwell, PhD</h1>
@@ -160,7 +206,8 @@
                     </p>
                 </div>
             </div>
-
+        </section>
+        <section id="participant-map">
             <div class="content-container">
                 <div class="text-content">
                     <p>All 50 U.S. states and the District of Columbia were represented in the sample by at least one participant. The top five states participants were located in include California (n = 92, 9%), Florida (n = 82, 8%), New York (n = 68, 7%), Texas (n = 65, 7%), and Ohio (n = 50, 5%). No one state made up more than 10% of the overall sample, and participants were fairly evenly spread out throughout the nation (for a full report of participants’ state of residence, see Table 1 below). Thirty-eight percent (n = 374) live in suburban environments, 32.27% (n = 313) in urban environments, 15.46% (n = 150) in small towns, and 13.40% (n = 130) in rural environments. Three participants (>1%) did not report on the population density of their residence.
@@ -199,7 +246,6 @@
                         vizElement.parentNode.insertBefore(scriptElement, vizElement);
                     </script>
                 </div>
-            </div>
         </section>
 
        
@@ -276,7 +322,7 @@
                 </div>
             </div>
         </section>
-
+<section id="Results">
 <div class="results">
   <h2>Results</h2>
   <p>Preliminary analyses showed all variables had a skew of less than two and kurtosis less than seven, indicating adequate normality. </p>
@@ -292,7 +338,9 @@
   </ul>
   <p>A series of models with profiles from two to 10 were analyzed using the tidyLPA package in R. Model fit was evaluated using Bayesian information criterion (BIC), Akaike’s information criterion (AIC), bootstrap likelihood ratio test (BLRT), and entropy score.</p>
   <p>Results indicated that the five-profile solution provided the best fit based on AIC and entropy scores. Although the BIC score suggested a six-profile solution, the five-profile solution had more substantive implications, leading to its selection for analysis.</p>
-
+</div>
+</section>
+<section id="Interactive-Radar-Chart">      
 <div class="content-container">
     <div class="image-content radar-chart">
         <iframe src="interactive_radar_chart.html" width="100%" height="600px"></iframe>
@@ -302,6 +350,7 @@
         <img class="image-large" src="https://raw.githubusercontent.com/mikilamichele/research/main/descriptive-stats-GEM-profiles.png" alt="Descriptive statistics for GEM profiles" style="width: 80%; max-width: 1200px;">
     </div>
 </div>
+</section>
  
   <h3>Demographic Differences in Profile Membership</h3>
   <h4>Effects of Ethnicity on Profile Membership</h4>
@@ -334,10 +383,12 @@
   <p><b>Identification with Commitment:</b> High and Moderate Achievers scored highest. Civic Nationals scored lowest.</p>
   <p>Overall, higher achievement in GEM identities correlated with high exploration (except ruminative) and commitment, supporting the existence of the latent profiles identified.</p>
 
+      <section id="Tableau-Dash">
          <!-- Tableau Dashboard Section Working-->
 <div class='tableauPlaceholder' id='viz1721631273257' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;GE&#47;GEMINAIOutcomesbyProfile&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='GEMINAIOutcomesbyProfile&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;GE&#47;GEMINAIOutcomesbyProfile&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1721631273257');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='877px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-    
-      
+      </section>
+
+      <section id="profiles-narcissism">
   <h3>GEM Profiles in Relation to Narcissism</h3>
   <p><b>H3a:</b> Lower social identities with higher narcissism was not supported. Profiles with lower social identities had higher moral identities. Moral Civic Explorers and Moral Nationals had the lowest narcissism scores, suggesting moral identity might protect against narcissism.</p>
   <p><b>H3b:</b> Higher global identity with higher narcissism was partially supported. Moderate and High Achievers scored high on global identity and leadership/authority narcissism. However, Moral Civic Explorers scored high on global identity but lowest on all narcissism subscales.</p>
@@ -347,11 +398,13 @@
   <p><b>Grandiose/Exhibitionism:</b> Civic Nationals scored highest, followed by Moderate and High Achievers. Moral Nationals and Moral Civic Explorers scored lowest.</p>
   <p><b>Entitlement/Exploitation:</b> Civic Nationals scored highest. Other profiles were equally low.</p>
   <p><b>Overall Narcissism:</b> Civic Nationals scored highest. High and Moderate Achievers scored moderately, with High Achievers scoring higher on leadership/authority narcissism.</p>
-  
+      </section>
+      <section id="profiles-altruism">
   <h3>GEM Profiles in Relation to Altruism</h3>
   <p><b>H4a:</b> High global identity profiles with higher altruism was supported. High Achievers, Moderate Achievers, and Moral Civic Explorers scored highest in altruism.</p>
   <p><b>H4b:</b> Higher civic identity profiles with higher altruism was partially supported. Moral Civic Explorers scored high on altruism and civic identity, but Civic Nationals, strongly characterized by civic identity, scored low on altruism. Civic identity may relate to higher altruism when moral identity is also prioritized.</p>
-  
+      </section>
+      <section id="profiles-ideology">
   <h3>GEM Profiles in Relation to Political Ideologies</h3>
   <p><b>H5a:</b> High national identity profiles with more conservative ideologies was supported. Profiles with higher national identities (Civic Nationals and Moral Nationals) scored more conservatively.</p>
   <p><b>H5b:</b> High global identity profiles with more liberal ideologies was not supported. High and Moderate Achievers, with high global identity, were moderate politically, with High Achievers slightly more liberal.</p>
@@ -359,9 +412,11 @@
   <h3>Political Ideologies in General</h3>
   <p>Civic Nationals were most conservative across all measures, consistent with low exploration scores and authoritarian tendencies associated with conservative ideologies. Moderate and High Achievers were more moderate, with High Achievers slightly more liberal. Moral identity drove more liberal political ideologies, with Moral Civic Explorers being the most liberal profile.</p>
 </div>
-
+      </section>
 <div class="discussion">
-  <h2>Discussion</h2>
+  
+    <section id="discussion">
+    <h2>Discussion</h2>
   <p>Profiles varied the most across civic identity measures, suggesting this identity may be an important (and relatively understudied) influence on self-concept and how we view ourselves in relation to society. American and Ethnic identities were the most homogenous across profiles, likely due to the predominantly White sample. All profiles scored high in moral internalization except Civic Nationals. Only High Achievers and Moderate Achievers scored high on moral symbolization.</p>
   <p>Higher internalization of identity with the community (measured through civic identity) and commitment to American identity were associated with profiles that also scored high on moral symbolization. This may suggest that increased internalization of a community-based identity may lead an individual to desire more to be assessed by others as a moral individual. Moral internalization was consistently higher compared to moral symbolization for all profiles except Civic Nationals.</p>
   
