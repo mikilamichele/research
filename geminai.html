@@ -8,14 +8,14 @@
     <style>
         .content-container {
             display: flex;
-            align-items: flex-start; /* Align items to the top */
+            align-items: flex-start;
             margin-bottom: 20px;
         }
         .image-content {
             flex: 1;
             display: flex;
             justify-content: center;
-            align-items: center; /* Center image vertically */
+            align-items: center;
             padding: 10px;
         }
         .text-content {
@@ -43,7 +43,11 @@
             width: 100%;
         }
         .image-content img {
-            max-width: 80%; /* Increase image size */
+            max-width: 100%;
+            height: auto;
+        }
+        .image-large {
+            max-width: 80%;
             height: auto;
         }
     </style>
@@ -81,7 +85,7 @@
                     <p><strong>Interrelationships and Political Implications:</strong> Previous research has explored these identities in isolation, but few studies have integrated them to understand their combined influence on political attitudes and behaviors. Understanding these interrelationships is critical, especially in a multicultural and politically polarized society. For example, strong national identity has been linked to more conservative political attitudes, while global identity is often associated with more liberal perspectives (Citrin et al., 1990; Schwartz et al., 2012).</p>
                 </div>
                 <div class="image-content">
-                    <img src="https://raw.githubusercontent.com/mikilamichele/research/main/info-thin-plumv2.png" alt="Infographic">
+                    <img class="image-large" src="https://raw.githubusercontent.com/mikilamichele/research/main/info-thin-plumv2.png" alt="Infographic">
                 </div>
             </div>
         </section>
@@ -129,7 +133,7 @@
                     </p>
                 </div>
                 <div class="image-content">
-                    <img src="https://raw.githubusercontent.com/mikilamichele/research/main/descriptive-stats-GEM-profiles.png" alt="Descriptive statistics for GEM profiles">
+                    <img class="image-large" src="https://raw.githubusercontent.com/mikilamichele/research/main/descriptive-stats-GEM-profiles.png" alt="Descriptive statistics for GEM profiles">
                 </div>
             </div>
 
@@ -247,6 +251,46 @@
             </div>
         </section>
 
+        <!-- Tableau Dashboard Section -->
+        <section id="tableau-dashboard">
+            <div class="content-container">
+                <div class="tableau-content">
+                    <div class='tableauPlaceholder' id='viz1721627799457' style='position: relative'>
+                        <noscript>
+                            <a href='#'>
+                                <img alt='Dashboard 1 ' src='https://public.tableau.com/static/images/GE/GEMINAIOutcomesbyProfile/Dashboard1/1_rss.png' style='border: none' />
+                            </a>
+                        </noscript>
+                        <object class='tableauViz' style='display:none;'>
+                            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+                            <param name='embed_code_version' value='3' /> 
+                            <param name='site_root' value='' />
+                            <param name='name' value='GEMINAIOutcomesbyProfile%2FDashboard1' />
+                            <param name='tabs' value='no' />
+                            <param name='toolbar' value='yes' />
+                            <param name='static_image' value='https://public.tableau.com/static/images/GE/GEMINAIOutcomesbyProfile/Dashboard1/1.png' />
+                            <param name='animate_transition' value='yes' />
+                            <param name='display_static_image' value='yes' />
+                            <param name='display_spinner' value='yes' />
+                            <param name='display_overlay' value='yes' />
+                            <param name='display_count' value='yes' />
+                            <param name='language' value='en-US' />
+                            <param name='filter' value='publish=yes' />
+                        </object>
+                    </div>
+                    <script type='text/javascript'>
+                        var divElement = document.getElementById('viz1721627799457');
+                        var vizElement = divElement.getElementsByTagName('object')[0];
+                        vizElement.style.width='100%';
+                        vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+                        var scriptElement = document.createElement('script');
+                        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+                    </script>
+                </div>
+            </div>
+        </section>
+
         <section id="results">
             <div class="content-container">
                 <div class="text-content">
@@ -268,7 +312,7 @@
                     </p>
                 </div>
                 <div class="image-content">
-                    <img src="https://raw.githubusercontent.com/mikilamichele/research/main/model-fit-stats.png" alt="LPA model fit statistics">
+                    <img class="image-large" src="https://raw.githubusercontent.com/mikilamichele/research/main/model-fit-stats.png" alt="LPA model fit statistics">
                 </div>
             </div>
             <div class="content-container">
